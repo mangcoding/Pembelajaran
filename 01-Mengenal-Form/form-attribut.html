@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Registrasi Siswa</title>
+		<style>
+			html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+			fieldset {border:solid 1px #CCC;}
+			body {background-color: #f8f8f8; font-size:13px; margin:0 auto; width:900px;}
+			label {vertical-align:top; float:left; min-width:400px;}
+			p {clear:both; margin:5px; border-bottom:solid 1px #DBDBDB; padding:10px 0px;}
+			input[type="text"], textarea {min-width:250px;}
+			h1, h2, h3 {text-align:center;}
+			input, textarea, select {-moz-border-radius: 5px; /* firefox */ -webkit-border-radius: 5px; /* chrome */ border-radius: 5px; /* IE */ border:solid 1px #CCC; padding:5px; min-height:20px;}
+			button {background-color:#8AC007; color:#FFF; padding:10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; border:solid 1px #CCC; cursor:pointer; border:solid 1px green;}		
+		</style>
+	</head>	
+<body>
+	<h1>Registrasi Penerimaan Siswa Baru</h1>
+	<form>
+	<fieldset legend="register">
+	<p>
+		<label>Nama Siswa (contoh Placeholder)</label>
+		<input type="text" name="nama" required placeholder="Masukkan Nama" autofocus />
+	</p>
+	<p>
+		<label>Tempat Lahir (dengan value/Nilai Awal)</label>
+		<input type="text" name="tempat" required value="Sukabumi" />
+	</p>
+	<p>
+		<label>Tanggal Lahir</label>
+		<input type="date" name="date" required max="1998-01-01" title="Umur harus lebih dari 17+"/>
+	</p>
+	<p>
+		<label>Total Sumbangan (min 100.000 max:1.000.000)</label>
+		<input type="number" name="sumbangan" min="100000" max="1000000" required />
+	</p>
+	<p>
+		<label>Masukkan Password (minimal 6-10 karakter)</label>
+		<input type="password" name="inputan" pattern=".{6,10}" required title="Minimal 3 karakter"/>
+	</p>
+	<p>
+		<label>Lebih lanjut tentang Pattern (3 digit hanya huruf)</label>
+		<input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+	<p>
+		<label>Contoh Penggunaan Step (kelipatan 5)</label>
+		<input type="number" name="points" step="5">
+	</p>
+	<p>
+		<label>Alamat (maksimal 30 Karakter)</label>
+		<textarea cols="20" rows="5" maxlength="30" required></textarea>
+	</p>
+	<p>
+		<label>Disabled Input</label>
+		<input type="date" name="text" value="Inputan disabled" disabled />
+	</p>
+	<p>
+		<label>Readonly Input</label>
+		<input type="date" name="text" value="Tidak bisa diedit" readonly />
+	</p>
+	<p>
+		<label>Asal Sekolah Siswa</label>
+		<input list="sekolah" required />
+		<datalist id="sekolah">
+		  <option value="SMPN 1 Cibadak">
+		  <option value="SMPN 2 Cibadak">
+		  <option value="SMPN 3 Cibadak">
+		  <option value="SMPN 1 Cisaat">
+		  <option value="SMPN 1 Nagrak">
+		  <option value="Lainnya">
+		</datalist> 
+	</p>
+	<p>
+		<label>Jenis Kelamin</label>
+		<input type="radio" name="jk" required />Laki-laki
+		<input type="radio" name="jk" required />Perempuan
+	</p>
+	<p>
+		<label>Upload Foto (Only Images)</label>
+		<input type="file" accept="image/*" required/>
+	</p>
+	<p>
+		<label>Extrakulikuler</label>
+		<input type="checkbox" name="eskul" required />Paskibra
+		<input type="checkbox" name="eskul" required />Karate
+		<input type="checkbox" name="eskul" required />Pramuka
+		<input type="checkbox" name="eskul" required />Karate
+		<input type="checkbox" name="eskul" required />Remaja masjid
+	</p>
+	<p>
+		<label>Pilih Jurusan</label>
+		<select name="jurusan" required>
+			<option>Pilih Jurusan</option>
+			<optgroup label="Tekhnologi dan Informasi">
+				<option>DKV</option>
+				<option>Multimedia</option>
+				<option>Sistem Informasi</option>
+			</optgroup>
+			<optgroup label="Pertanian dan Kehutanan">
+				<option>THP</option>
+				<option>Agronomi</option>
+				<option>Peternakan</option>
+				<option>Perikanan</option>
+			</optgroup>
+		</select>
+	</p>
+	<p>
+		<button type="submit">Registrasi</button>
+		<button type="reset">Reset</button>
+	</p>
+	</fieldset>
+	</form>
+	<p>Refference : <a href="http://www.w3schools.com/html/html_form_attributes.asp">Click Here</a>
+</body>
+</html>
